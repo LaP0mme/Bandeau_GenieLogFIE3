@@ -8,10 +8,22 @@ import java.awt.Font;
 public class ExempleDUtilisation {
 
     public static void main(String[] args) {
-        new ExempleDUtilisation().exemple();
+        Bandeau monBando = new Bandeau();
+        Font font = monBando.getFont();
+        Color back = monBando.getBackground();
+        Color fore = monBando.getForeground();
+        Effet1 effetColor = new Effet1("Feu Tricolore");
+        Effet2 effetRotate = new Effet2("Tourbilol");
+        Effet3 effetClignotant = new Effet3("Clignotant");
+        scenario s = new scenario();
+        s.addEffet(effetColor, 1);
+        s.addEffet(effetRotate, 1);
+        s.addEffet(effetClignotant, 1);
+        s.startScenario(monBando);
+
     }
 
-    public void exemple() {
+    /* public void exemple() {
         Bandeau monBandeau = new Bandeau();
         Font font = monBandeau.getFont();
         Color back = monBandeau.getBackground();
@@ -57,5 +69,5 @@ public class ExempleDUtilisation {
         monBandeau.setMessage("Terminé");
         monBandeau.sleep(3000);
         monBandeau.close();
-    }
+    }*/
 }
